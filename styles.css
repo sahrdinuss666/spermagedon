@@ -6,6 +6,8 @@
   --muted: #94a3b8;
   --border: #1f2937;
   --pill: #1e293b;
+  --accent-alt: #c084fc;
+  --pill-alt: #221a30;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   --radius: 16px;
   --gap: 16px;
@@ -33,6 +35,32 @@ header, main, footer {
   margin: 0 auto;
 }
 
+.topnav {
+  display: flex;
+  gap: 12px;
+  margin: 0 auto 16px;
+  padding: 12px 0;
+  max-width: 960px;
+}
+
+.topnav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.topnav a:hover {
+  color: #fff;
+  border-color: var(--border);
+}
+
+.page-block {
+  margin-top: 12px;
+}
+
 .hero {
   background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(94, 234, 212, 0.08));
   border: 1px solid var(--border);
@@ -43,12 +71,20 @@ header, main, footer {
   box-shadow: var(--shadow);
 }
 
+.hero--lucas {
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.15), rgba(59, 130, 246, 0.12));
+}
+
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 70% 0%, rgba(251, 191, 36, 0.18), transparent 40%);
   pointer-events: none;
+}
+
+.hero--lucas::after {
+  background: radial-gradient(circle at 65% 5%, rgba(192, 132, 252, 0.18), transparent 42%);
 }
 
 .hero__content {
@@ -91,6 +127,12 @@ h1 {
   font-size: 0.95rem;
 }
 
+.chip--violet {
+  background: var(--pill-alt);
+  border-color: rgba(192, 132, 252, 0.25);
+  color: #d8b4fe;
+}
+
 .hero__badge {
   position: absolute;
   top: 24px;
@@ -103,6 +145,13 @@ h1 {
   font-weight: 700;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   z-index: 1;
+}
+
+.hero__badge--violet {
+  background: #1a1329;
+  color: #d8b4fe;
+  border-color: rgba(192, 132, 252, 0.35);
+  box-shadow: 0 10px 30px rgba(192, 132, 252, 0.35);
 }
 
 .panel {
