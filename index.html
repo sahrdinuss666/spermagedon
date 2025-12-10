@@ -8,12 +8,12 @@
 </head>
 <body>
   <nav class="topnav">
-    <a href="#bryan">Page Bryan</a>
-    <a href="#lucas">Page Lucas</a>
+    <button class="tab-btn is-active" data-target="bryan">Page Bryan</button>
+    <button class="tab-btn" data-target="lucas">Page Lucas</button>
   </nav>
 
   <main>
-    <section id="bryan" class="page-block">
+    <section id="bryan" class="page-block is-active">
       <header class="hero">
         <div class="hero__content">
           <p class="eyebrow">Carrière (très) discutable</p>
@@ -164,7 +164,7 @@
             <div class="timeline__dot"></div>
             <div>
                <h3>2025 — rencontre avec son chiffon a sperm</h3>
-               <p>obligé d'obéire a ses ordres comme un petit toutou pour esperer se vider la klawi.</p> 
+               <p>obligé d'obéire a ses ordres comme un petit toutou pour esperer se vider les klawi.</p> 
             </div>
           </div>
         </div>
@@ -192,5 +192,22 @@
   <footer>
     <p>Site par un fan ironique. Aucun trophée n'a été blessé pendant l'écriture.</p>
   </footer>
+
+  <script>
+    // Navigation simple : affiche une seule page avec une animation
+    const tabs = document.querySelectorAll(".tab-btn");
+    const pages = document.querySelectorAll(".page-block");
+
+    tabs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        tabs.forEach((b) => b.classList.toggle("is-active", b === btn));
+        pages.forEach((page) => {
+          const active = page.id === target;
+          page.classList.toggle("is-active", active);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
