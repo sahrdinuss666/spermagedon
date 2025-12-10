@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La saga de Bryan Chrétien</title>
+  <title>2 frères 2 fauves</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="topnav">
-    <button class="tab-btn is-active" data-target="home">Accueil</button>
-    <button class="tab-btn" data-target="bryan">Page Bryan</button>
-    <button class="tab-btn" data-target="lucas">Page Lucas</button>
+    <a href="index.html" class="tab-btn is-active">Accueil</a>
+    <a href="bryan.html" class="tab-btn">Page Bryan</a>
+    <a href="lucas.html" class="tab-btn">Page Lucas</a>
   </nav>
 
   <main>
-    <!-- Page d'accueil -->
-    <section id="home" class="page-block is-active">
+    <section class="page-block is-active">
       <header class="hero hero--home">
         <div class="hero__content">
           <p class="eyebrow">Deux frangins, deux styles</p>
-          <h1>2 freres 2fauves</h1>
+          <h1>2 frères 2 fauves</h1>
           <p class="lede">
             Choisissez votre aventure : Bryan le basketteur maudit ou Lucas le gamer obéissant.
             Cliquez et profitez des meilleures vannes de la fratrie Chrétien.
           </p>
           <div class="cta-links">
-            <button class="link-btn" data-target="bryan">Voir la page Bryan</button>
-            <button class="link-btn link-btn--ghost" data-target="lucas">Voir la page Lucas</button>
+            <a class="link-btn" href="bryan.html">Voir la page Bryan</a>
+            <a class="link-btn link-btn--ghost" href="lucas.html">Voir la page Lucas</a>
           </div>
         </div>
         <div class="hero__badge">Accueil</div>
@@ -36,189 +35,13 @@
         <article class="card">
           <h3>Team Bryan</h3>
           <p>Panier en mousse, excuses en béton. Entrez dans la saga du presque-pro.</p>
-          <button class="link-btn small" data-target="bryan">Aller à Bryan</button>
+          <a class="link-btn small" href="bryan.html">Aller à Bryan</a>
         </article>
         <article class="card card--violet">
           <h3>Team Lucas</h3>
           <p>Gamer sous haute surveillance. Entre deux ragequits, il obéit (toujours).</p>
-          <button class="link-btn small link-btn--ghost" data-target="lucas">Aller à Lucas</button>
+          <a class="link-btn small link-btn--ghost" href="lucas.html">Aller à Lucas</a>
         </article>
-      </section>
-    </section>
-
-    <!-- Page dédiée à Bryan -->
-    <section id="bryan" class="page-block">
-      <header class="hero">
-        <div class="hero__content">
-          <p class="eyebrow">Carrière (très) discutable</p>
-          <h1>Bryan Chrétien</h1>
-          <p class="lede">
-            Une page hommage qui raconte une trajectoire sportive pleine de ratés, d'essais
-            manqués et de promesses jamais tenues. Le tout raconté avec autodérision.
-          </p>
-          <div class="hero__chips">
-            <span class="chip">0 dunks mémorables</span>
-            <span class="chip">3 cartons évitables</span>
-            <span class="chip">1 fan (son daron)</span>
-          </div>
-        </div>
-        <div class="hero__badge">Le presque pro</div>
-      </header>
-
-      <section class="panel">
-        <h2>Faits marquants</h2>
-        <div class="stats">
-          <article class="stat">
-            <p class="stat__number">2014</p>
-            <p class="stat__label">Premier match… sur le banc</p>
-          </article>
-          <article class="stat">
-            <p class="stat__number">17</p>
-            <p class="stat__label">Passes en touche non voulues</p>
-          </article>
-          <article class="stat">
-            <p class="stat__number">0</p>
-            <p class="stat__label">Interviews demandées</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Ligne du temps</h2>
-        <div class="timeline">
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2012 — Les débuts</h3>
-              <p>Signe dans un club local. Le public retient surtout sa coupe de cheveux.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2015 — Objectif de vie</h3>
-              <p>Quitte le banc pour au moins pouvoir regarder le match de plus près.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2018 — Blessure étrange</h3>
-              <p>Se foule la cheville… en célébrant un panier de l'équipe adverse.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2021 — Changement de poste</h3>
-              <p>Passe arrière pour “voir autre chose”. Constate que ce n'est pas mieux.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2024 — Reconversion</h3>
-              <p>Devient coach personnel… pour éviter d'être aligné sur le terrain.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel highlights">
-        <h2>Points forts (selon lui)</h2>
-        <ul>
-          <li>Maîtrise du banc de touche niveau expert.</li>
-          <li>Capacité à raconter des excuses créatives après chaque match.</li>
-          <li>Très bon pour demander le ballon sans jamais le recevoir.</li>
-        </ul>
-      </section>
-    </section>
-
-    <section id="lucas" class="page-block">
-      <header class="hero hero--lucas">
-        <div class="hero__content">
-          <p class="eyebrow">Gamer obéissant (trop)</p>
-          <h1>Lucas Chrétien</h1>
-          <p class="lede">
-            Petit frère gentil, mais coaché par une partenaire ultra pot-de-colle qui veut
-            le monopoliser. Résultat : il obéit, joue en douce et enchaîne les défaites en jeu vidéo.
-          </p>
-          <div class="hero__chips">
-            <span class="chip chip--violet">K/D ratio catastrophique</span>
-            <span class="chip chip--violet">Ragequits par minute : 3</span>
-            <span class="chip chip--violet">Disponibilité : “ça dépend d'elle”</span>
-          </div>
-        </div>
-        <div class="hero__badge hero__badge--violet">Le sujet muet du duo</div>
-      </header>
-
-      <section class="panel">
-        <h2>Faits marquants</h2>
-        <div class="stats">
-          <article class="stat">
-            <p class="stat__number">12</p>
-            <p class="stat__label">Claviers cassés dans un élan de rage</p>
-          </article>
-          <article class="stat">
-            <p class="stat__number">21:00</p>
-            <p class="stat__label">Heure max autorisée avant rappel de sa moitié</p>
-          </article>
-          <article class="stat">
-            <p class="stat__number">0.6</p>
-            <p class="stat__label">K/D sur ses FPS favoris (et c'est un record)</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Ligne du temps</h2>
-        <div class="timeline">
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-              <h3>2020 — Premier clavier KO</h3>
-              <p>Perd 13-0 sur VALO, rage et découvre que les claviers ne sont pas indestructibles.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-               <h3>2022 — stream discord le plus catastrophique de l'histoire</h3>
-               <p>3 spectateurs : sa copine, Bryan… et un bot. Il perd quand même.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-               <h3>2024 — Ragequit légendaire</h3>
-               <p>Quitte en plein ranked pour répondre “j'arrive chérie”. Pénalité : -50 LP.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div>
-               <h3>2025 — rencontre avec son chiffon a sperm</h3>
-               <p>obligé d'obéire a ses ordres comme un petit toutou pour esperer se vider les klawi.</p> 
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel highlights">
-        <h2>Points forts (selon tout le monde sauf lui)</h2>
-        <ul>
-          <li>Obéissance instantanée aux notifs “viens tout de suite”.</li>
-          <li>Skill unique : réussir à rater tous ses sorts.</li>
-          <li>Capacité à quitter la voc pour sleepcall avec sa gadji.</li>
-        </ul>
-      </section>
-
-      <section class="panel cta">
-        <div>
-          <h2>Envie de le carry ?</h2>
-          <p>Inscrivez-vous pour les prochains streams où Lucas testera l'obéissance… et perdra encore.</p>
-        </div>
-        <button type="button">Je tente le carry</button>
       </section>
     </section>
   </main>
@@ -226,32 +49,5 @@
   <footer>
     <p>Site par un fan ironique. Aucun trophée n'a été blessé pendant l'écriture.</p>
   </footer>
-
-  <script>
-    // Navigation simple : affiche une seule page avec animation fade/slide
-    const triggers = document.querySelectorAll("[data-target]");
-    const pages = document.querySelectorAll(".page-block");
-
-    function showPage(target) {
-      // active state on nav tabs
-      document.querySelectorAll(".tab-btn").forEach((btn) => {
-        btn.classList.toggle("is-active", btn.getAttribute("data-target") === target);
-      });
-      // toggle page visibility
-      pages.forEach((page) => {
-        const active = page.id === target;
-        page.classList.toggle("is-active", active);
-      });
-    }
-
-    triggers.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-target");
-        showPage(target);
-        // remonter en haut de la page
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    });
-  </script>
 </body>
 </html>

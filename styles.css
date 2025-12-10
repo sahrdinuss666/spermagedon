@@ -64,6 +64,10 @@ header, main, footer {
   color: #fff;
 }
 
+.topnav a {
+  text-decoration: none;
+}
+
 .page-block {
   margin-top: 12px;
   display: none;
