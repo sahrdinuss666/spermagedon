@@ -8,12 +8,46 @@
 </head>
 <body>
   <nav class="topnav">
-    <button class="tab-btn is-active" data-target="bryan">Page Bryan</button>
+    <button class="tab-btn is-active" data-target="home">Accueil</button>
+    <button class="tab-btn" data-target="bryan">Page Bryan</button>
     <button class="tab-btn" data-target="lucas">Page Lucas</button>
   </nav>
 
   <main>
-    <section id="bryan" class="page-block is-active">
+    <!-- Page d'accueil -->
+    <section id="home" class="page-block is-active">
+      <header class="hero hero--home">
+        <div class="hero__content">
+          <p class="eyebrow">Deux frangins, deux styles</p>
+          <h1>2 freres 2fauves</h1>
+          <p class="lede">
+            Choisissez votre aventure : Bryan le basketteur maudit ou Lucas le gamer obéissant.
+            Cliquez et profitez des meilleures vannes de la fratrie Chrétien.
+          </p>
+          <div class="cta-links">
+            <button class="link-btn" data-target="bryan">Voir la page Bryan</button>
+            <button class="link-btn link-btn--ghost" data-target="lucas">Voir la page Lucas</button>
+          </div>
+        </div>
+        <div class="hero__badge">Accueil</div>
+      </header>
+
+      <section class="panel grid-duo">
+        <article class="card">
+          <h3>Team Bryan</h3>
+          <p>Panier en mousse, excuses en béton. Entrez dans la saga du presque-pro.</p>
+          <button class="link-btn small" data-target="bryan">Aller à Bryan</button>
+        </article>
+        <article class="card card--violet">
+          <h3>Team Lucas</h3>
+          <p>Gamer sous haute surveillance. Entre deux ragequits, il obéit (toujours).</p>
+          <button class="link-btn small link-btn--ghost" data-target="lucas">Aller à Lucas</button>
+        </article>
+      </section>
+    </section>
+
+    <!-- Page dédiée à Bryan -->
+    <section id="bryan" class="page-block">
       <header class="hero">
         <div class="hero__content">
           <p class="eyebrow">Carrière (très) discutable</p>
@@ -194,18 +228,28 @@
   </footer>
 
   <script>
-    // Navigation simple : affiche une seule page avec une animation
-    const tabs = document.querySelectorAll(".tab-btn");
+    // Navigation simple : affiche une seule page avec animation fade/slide
+    const triggers = document.querySelectorAll("[data-target]");
     const pages = document.querySelectorAll(".page-block");
 
-    tabs.forEach((btn) => {
+    function showPage(target) {
+      // active state on nav tabs
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.getAttribute("data-target") === target);
+      });
+      // toggle page visibility
+      pages.forEach((page) => {
+        const active = page.id === target;
+        page.classList.toggle("is-active", active);
+      });
+    }
+
+    triggers.forEach((btn) => {
       btn.addEventListener("click", () => {
         const target = btn.getAttribute("data-target");
-        tabs.forEach((b) => b.classList.toggle("is-active", b === btn));
-        pages.forEach((page) => {
-          const active = page.id === target;
-          page.classList.toggle("is-active", active);
-        });
+        showPage(target);
+        // remonter en haut de la page
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
   </script>
